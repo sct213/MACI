@@ -7,5 +7,7 @@
     	<!-- Ctrl + Alt + /^ -->
 		<typeAlias type="poly.dto.DummyDTO" alias="DummyDTO"/>
 		<typeAlias type="poly.dto.EmpDTO" alias="EmpDTO"/>
+		<typeAlias type="poly.dto.BoardDTO" alias="BoardDTO"/>
+		<typeAlias type="poly.dto.UserDTO" alias="UserDTO"/>
     </typeAliases>
 </configuration>

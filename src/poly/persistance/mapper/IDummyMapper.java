@@ -7,7 +7,7 @@ import poly.dto.DummyDTO;
 
 @Mapper("DummyMapper")
 public interface IDummyMapper {
-
+	
 	//게시판 리스트
 	List<DummyDTO> getDummyList() throws Exception;
 	

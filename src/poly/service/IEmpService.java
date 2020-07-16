@@ -8,5 +8,6 @@ public interface IEmpService {
 
 	List<EmpDTO> getEmpList() throws Exception;
 
+	List<EmpDTO> getManagerList() throws Exception;
 
 }

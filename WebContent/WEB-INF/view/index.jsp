@@ -12,6 +12,10 @@
 </style>
 </head>
 <body>
+<!-- top Start (다른 파일에서도 같은 코드를 사용할 수 있어 편리하다 -->
+<div>
+	<%@ include file="/WEB-INF/view/user/top.jsp" %>
+</div>
 와! 스프링 아시는구나!
 참고로 겁.나.어.렵.습.니.다
 </body>

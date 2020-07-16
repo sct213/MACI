@@ -10,5 +10,7 @@ public interface IEmpMapper {
 
 	List<EmpDTO> getEmpList() throws Exception;
 
+	List<EmpDTO> getManagerList() throws Exception;
+
 
 }
