@@ -1,0 +1,14 @@
+package poly.persistance.mapper;
+
+import java.util.List;
+
+import config.Mapper;
+import poly.dto.DummyDTO;
+
+@Mapper("UserInfoMapper")
+public interface IUserInfoMapper {
+
+	int InsertUserInfo(UserInfoDTO pDTO) throws Exception;
+	UserInfoDTO getUserExists(UserInfoDTO pDTO) throws Exception;
+	
+}

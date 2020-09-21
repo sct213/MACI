@@ -1,0 +1,54 @@
+package poly.controller;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.log4j.Logger;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import poly.dto.UserInfoDTO;
+import poly.service.IUserInfoService;
+import poly.util.CmmUtil;
+
+
+@Controller
+public class UserInfoController {
+	
+	private Logger log = Logger.getLogger(this.getClass());
+	
+	@Resource(name="UserInfoService")
+	private IUserInfoService userInfoService;
+	
+	@RequestMapping(value="user/userRegForm")
+	public String userRegForm() {
+		log.info(this.getClass().getName() + ".user/userRegForm OK!");
+		
+		return "/user/UserRegForm";
+	}
+	
+	@RequestMapping(value="user/insertUserInfo")
+	public String insertUserInfo(HttpServletRequest request, HttpServletResponse response, ModelMap model)
+	) throws Exception{
+		log.info(this.getClass().getName() + ".insertUserInfo Start!");
+		
+		String msg = "";
+		
+		UserInfoDTO pDTO = null;
+		
+		try {
+			String user_id = CmmUtil.nvl(request.getParameter("user_id"));
+			String user_name = CmmUtil.nvl(request.getParameter("user_name"));
+			String password = CmmUtil.nvl(request.getParameter("password"));
+			String email = CmmUtil.nvl(request.getParameter("email"));
+			String addr1 = CmmUtil.nvl(request.getParameter("addr1"));
+			String addr2 = CmmUtil.nvl(request.getParameter("addr2"));
+			
+			log.info("user_id : " + user_id);
+			log.info("user_name : " + user_name);
+			log.info*
+		}
+	}
+}

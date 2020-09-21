@@ -1,0 +1,12 @@
+package poly.dto;
+
+/**
+ * @author ?ù¥?òëÍ±?
+ * @version 1.1 Í≥µÏ??Ç¨?ï≠ DTO
+ */
+
+public class UserInfoDTO {
+
+	
+
+}

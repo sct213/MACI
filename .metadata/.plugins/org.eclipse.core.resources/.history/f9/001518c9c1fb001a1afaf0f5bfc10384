@@ -1,0 +1,25 @@
+package poly.controller;
+
+import javax.annotation.Resource;
+
+import org.apache.log4j.Logger;
+import org.springframework.stereotype.Controller;
+
+import poly.service.IUserInfoService;
+
+
+@Controller
+public class UserInfoController {
+	
+	private Logger log = Logger.getLogger(this.getClass());
+	
+	@Resource(name="UserInfoService")
+	private IUserInfoService userInfoService;
+	
+	@RequestMappihg(value="user/userRegFrom")
+	public String userRegForm() {
+		log.info(this.getClass().getName() + ".user/userRegForm OK!");
+		
+		return "/user/UserRegForm";
+	}
+}

@@ -1,0 +1,13 @@
+package poly.persistance.mapper;
+
+import java.util.List;
+
+import config.Mapper;
+import poly.dto.DummyDTO;
+
+@Mapper("UserInfoMapper")
+public interface IUserInfoMapper {
+
+	List<DummyDTO> getDummyList() throws Exception;
+	
+}
