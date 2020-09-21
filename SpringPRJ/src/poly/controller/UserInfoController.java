@@ -59,21 +59,21 @@ public class UserInfoController {
 			
 			pDTO.setPassword(EncryptUtil.encHashSHA256(password));
 			
-			pDTO.setEmail(EnryptUtil.encAES128CBC(email));
+			pDTO.setEmail(EncryptUtil.encAES128CBC(email));
 			pDTO.setAddr1(addr1);
 			pDTO.setAddr2(addr2);
 			
 			int res = userInfoService.insertUserInfo(pDTO);
 			
 			if(res == 1) {
-				msg = "È¸¿ø°¡ÀÔµÇ¾ú½À´Ï´Ù.";
+				msg = "íšŒì›ê°€ì…ë˜ì—ˆìŠµë‹ˆë‹¤.";
 			} else if(res==2) {
-				msg = "ÀÌ¹Ì °¡ÀÔµÈ ÁÖ¼ÒÀÔ´Ï´Ù.";
+				msg = "ì´ë¯¸ ê°€ì…ëœ ì´ë©”ì¼ ì£¼ì†Œì…ë‹ˆë‹¤.";
 			} else {
-				msg = "¿À·ù·Î ÀÎÇØ È¸¿ø°¡ÀÔÀÌ µÇ¾ú½À´Ï´Ù.";
+				msg = "ì˜¤ë¥˜ë¡œ ì¸í•´ íšŒì›ê°€ì…ì— ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.";
 			}
 		} catch(Exception e) {
-			msg = "½ÇÆĞÇÏ¿´½À´Ï´Ù. : " + e.toString();
+			msg = "ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤. : " + e.toString();
 			log.info(e.toString());
 			e.printStackTrace();
 		} finally {
@@ -84,6 +84,6 @@ public class UserInfoController {
 			pDTO = null;
 		}
 		
-		
+		return "/user/Msg";
 	}
 }

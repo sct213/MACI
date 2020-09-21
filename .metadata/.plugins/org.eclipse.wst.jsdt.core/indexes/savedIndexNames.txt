@@ -1,6 +1,7 @@
-INDEX VERSION 1.4+C:\Workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-2252030539.index
-1781588358.index
-2652663318.index
-32162429.index
-1506996795.index
+INDEX VERSION 1.4+/Users/dead_line/DEV/SpringW/Window_Mac/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+479526118.index
+3728954258.index
+486689787.index
+1075193682.index
+2859168575.index
+368597658.index

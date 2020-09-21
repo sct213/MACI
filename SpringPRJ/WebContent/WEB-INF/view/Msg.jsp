@@ -1,10 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@page import="poly.util.CmmUtil"%>
 <%@page import="poly.dto.UserInfoDTO"%>
-<%@page import=" static poly.util.CmmUtil.nvl"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <%
 
-String msg = nvl((String)request.getAttribute("msg"));
+String msg = CmmUtil.nvl((String)request.getAttribute("msg"));
 
 UserInfoDTO pDTO = (UserInfoDTO)request.getAttribute("pDTO");
 
@@ -16,13 +16,13 @@ if(pDTO==null){
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>М ▄Л⌡░Й╟─Л·┘Л²└ Л╤∙М∙≤К⌠°К╕╫К▀┬К▀╓</title>
+<meta charset="EUC-KR">
+<title>х╦©Ь╟║ютю╩ цЮго╣Е╦Ё╢о╢ы</title>
 <script type="text/javascript">
 	alert("<%=msg%>");
 </script>
 </head>
 <body>
-<%=nvl(pDTO.getUser_name()) %>К▀≤Л²≤ М ▄Л⌡░Й╟─Л·┘Л²└ Л╤∙М∙≤М∙╘К▀┬К▀╓.
+<%=CmmUtil.nvl(pDTO.getUser_name()) %>╢тюг х╦©Ь╟║ютю╩ цЮгогу╢о╢ы.
 </body>
 </html>

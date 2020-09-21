@@ -91,9 +91,9 @@ public class EncryptUtil {
 	public static String decAES128CBC(String str) throws UnsupportedEncodingException, NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, InvalidAlgorithmParameterException, IllegalBlockSizeException, BadPaddingException {
 		byte[] textBytes = Base64.decodeBase64(str);
 		
-		AlgorithmParameterSpec ivSpec = new IvParamterSpec(ivBytes);
+		AlgorithmParameterSpec ivSpec = new IvParameterSpec(ivBytes);
 		SecretKeySpec newKey = new SecretKeySpec(key.getBytes("UTF-8"), "AES");
-		Cipher cipher = cipher.getInstance("AES/CBC/PKCS5Padding");
+		Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
 		cipher.init(Cipher.DECRYPT_MODE, newKey, ivSpec);
 		return new String(cipher.doFinal(textBytes), "UTF-8");
 	}

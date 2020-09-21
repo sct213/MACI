@@ -1,3 +1,5 @@
 INDEX VERSION 1.131
+/Users/dead_line/DEV/SpringW/Window_Mac/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/486689787.index
+/SpringPRJ/src
 C:\Workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3468012615.index
 \SpringPRJ\src
