@@ -3,7 +3,7 @@
 <!-- JAVA와 연결할 Mapper 파일 설정 -->
 <mapper namespace="poly.persistance.mapper.IUserInfoMapper">
 
-	<!-- 게시판 리스트 쿼리 -->
+	<!-- 회원 가입하기(회원정보등록) -->
 	<insert id="getUserInfo" parameterType="UserInfoDTO">
 		INSERT INTO USER_INFO
 			(
@@ -14,6 +14,7 @@
 				ADDR1,
 				ADDR2,
 				REG_ID,
+				REG_DT,
 				CHG_ID,
 				CHG_DT
 			)
@@ -31,6 +32,7 @@
 		)
 	</insert>
 	
+	<!-- 이메일로 회원 가입 중복 방지하기 -->
 	<select id="getUserExists" parameterType="UserInfoDTO" resultType="UserInfoDTO">
 		SELECT DECODE(COUNT(1), 0, 'N', 'Y') AS EXISTS_YN
 			FROM USER_INFO

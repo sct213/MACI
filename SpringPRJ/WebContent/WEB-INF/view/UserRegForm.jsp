@@ -1,90 +1,98 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>íšŒì›ê°€ì… í™”ë©´</title>
-<script type="text/javascript">
-	//íšŒì›ê°€ì… ì •ë³´ì˜ ìœ íš¨ì„± ì²´í¬í•˜ê¸°
-	function doRegUserCheck(f) {
+<meta charset="EUC-KR">
+<title>È¸¿ø°¡ÀÔÈ­¸é</title>
 
-		if (f.user_id.value == "") {
-			alert("ì•„ì´ë””ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
+<script type="text/javascript">
+	
+	function doRegUserCheck(f){
+		
+		if(f.user_id.value=""){
+			alert("¾ÆÀÌµğ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
 			f.user_id.focus();
-			return false
+			return false;
 		}
-		if (f.user_name.value == "") {
-			alert("ì´ë¦„ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
+		
+		if(f.user_name.value=""){
+			alert("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä.");
 			f.user_name.focus();
-			return false
+			return false;
 		}
-		if (f.user_pwd.value == "") {
-			alert("ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
-			f.user_pwd.focus();
-			return false
+		
+		if(f.password.value=""){
+			alert("ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+			f.password.focus();
+			return false;
 		}
-		if (f.user_pwd2.value == "") {
-			alert("ë¹„ë°€ë²ˆí˜¸í™•ì¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
-			f.user_pwd2.focus();
-			return false
+		
+		if(f.password2.value=""){
+			alert("ºñ¹Ğ¹øÈ£¸¦ È®ÀÎÇÏ¼¼¿ä.");
+			f.password2.focus();
+			return false;
 		}
-		if (f.email.value == "") {
-			alert("ì´ë©”ì¼ì„ ì…ë ¥í•˜ì„¸ìš”.");
+		
+		if(f.email.value=""){
+			alert("ÀÌ¸ŞÀÏÀ» ÀÔ·ÂÇÏ¼¼¿ä.");
 			f.email.focus();
-			return false
+			return false;
 		}
-		if (f.addr1 == "") {
-			alert("ì£¼ì†Œë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
+		
+		if(f.addr1.value=""){
+			alert("ÁÖ¼Ò¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
 			f.addr1.focus();
-			return false
+			return false;
 		}
-		if (f.addr2.value == "") {
-			alert("ìƒì„¸ì£¼ì†Œë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
+		
+		if(f.addr2.value=""){
+			alert("»ó¼¼ ÁÖ¼Ò¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
 			f.addr2.focus();
-			return false
+			return false;
 		}
 	}
-</script>
-</head>
-<body>
-
-	<h1>íšŒì›ê°€ì… í™”ë©´</h1>
+	</script>
+	
+	
+	</head>
+	<body>
+	
+	<h1>È¸¿ø°¡ÀÔ È­¸é</h1>
 	<br />
 	<br />
-	<form name="f" method="post" action="/user/insertUserInfo.do"
-		onsubmit="return doRegUserCehck(this);">
-		<table border="1">
-			<col width="150px">
-			<col width="150px">
-			<col width="150px">
-			<col width="150px">
-			<tr>
-				<td>ì•„ì´ë””</td>
-				<td><input type="text" name="user_id" style="width: 150px" /></td>
-				<td>ì´ë¦„</td>
-				<td><input type="text" name="user_name" style="width: 150px" /></td>
-			</tr>
-			<tr>
-				<td>ë¹„ë°€ë²ˆí˜¸</td>
-				<td><input type="password" name="user_pwd" style="width:150px"/></td>
-				<td>ë¹„ë°€ë²ˆí˜¸í™•ì¸</td>
-				<td><input type="password" name="user_pwd2" style="width:150px"/></td>
-				</tr>
-				<tr>
-				<td>ì´ë©”ì¼</td>
-				<td colspan="3"><input type="text" name="email" style="width:450px"/></td>
-				</tr>
-				<tr>
-				<td>ì£¼ì†Œ</td>
-				<td colspan="3"><input type="text" name="addr1" style="width:450px"/></td>
-				</tr>
-				<tr>
-				<td>ìƒì„¸</td>
-				<td colspan="3"><input type="text" name="addr2" style="width:450px"/></td>
-				</tr>
-		</table>
-		<input type="submit" value="íšŒì›ê°€ì…"/>
-		</form>
-</body>
+	<form name="f" method="post" action="/user/insertUserInfo.do" onsubmit="return doRegUserCheck(this);">
+	<table border="1">
+	<col width="150px">
+	<col width="150px">
+	<col width="150px">
+	<col width="150px">
+	<tr>
+		<td>¾ÆÀÌµğ</td>
+		<td><input type="text" name="user_id" style="width:150px"/></td>
+		<td>ÀÌ¸§</td>
+		<td><input type="text" name="user_name" style="width:150px"/></td>
+	</tr>
+	<tr>
+		<td>ºñ¹Ğ¹øÈ£</td>
+		<td><input type="password" name="password" style="width:150px"/></td>
+		<td>ºñ¹Ğ¹øÈ£ È®ÀÎ</td>
+		<td><input type="password" name="password2" style="width:150px"/></td>
+	</tr>
+	<tr>
+		<td>ÀÌ¸ŞÀÏ</td>
+		<td colspan="3"><input type="text" name="email" style="width:450px"/></td>
+	</tr>
+	<tr>
+		<td>ÁÖ¼Ò</td>
+		<td colspan="3"><input type="text" name="addr1" style="width:450px"/></td>
+	</tr>
+	<tr>
+		<td>»ó¼¼</td>
+		<td colspan="3"><input type="text" name="addr2" style="width:450px"/></td>
+	</tr>
+	</table>
+	<input type="submit" value="È¸¿ø°¡ÀÔ"/>
+	</form>
+	</body>
 </html>

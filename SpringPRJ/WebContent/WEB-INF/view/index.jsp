@@ -1,18 +1,98 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+	pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<style>
-	table, th, td{
-		border : 1px solid black;
+<meta charset="EUC-KR">
+<title>È¸¿ø°¡ÀÔÈ­¸é</title>
+
+<script type="text/javascript">
+	
+	function doRegUserCheck(f){
+		
+		if(f.user_id.value=""){
+			alert("¾ÆÀÌµğ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+			f.user_id.focus();
+			return false;
+		}
+		
+		if(f.user_name.value=""){
+			alert("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä.");
+			f.user_name.focus();
+			return false;
+		}
+		
+		if(f.password.value=""){
+			alert("ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+			f.password.focus();
+			return false;
+		}
+		
+		if(f.password2.value=""){
+			alert("ºñ¹Ğ¹øÈ£¸¦ È®ÀÎÇÏ¼¼¿ä.");
+			f.password2.focus();
+			return false;
+		}
+		
+		if(f.email.value=""){
+			alert("ÀÌ¸ŞÀÏÀ» ÀÔ·ÂÇÏ¼¼¿ä.");
+			f.email.focus();
+			return false;
+		}
+		
+		if(f.addr1.value=""){
+			alert("ÁÖ¼Ò¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+			f.addr1.focus();
+			return false;
+		}
+		
+		if(f.addr2.value=""){
+			alert("»ó¼¼ ÁÖ¼Ò¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+			f.addr2.focus();
+			return false;
+		}
 	}
-</style>
-</head>
-<body>
-ì™€! ìŠ¤í”„ë§ ì•„ì‹œëŠ”êµ¬ë‚˜!
-ì°¸ê³ ë¡œ ê².ë‚˜.ì–´.ë µ.ìŠµ.ë‹ˆ.ë‹¤
-</body>
+	</script>
+	
+	
+	</head>
+	<body>
+	
+	<h1>È¸¿ø°¡ÀÔ È­¸é</h1>
+	<br />
+	<br />
+	<form name="f" method="post" action="/user/insertUserInfo.do" onsubmit="return doRegUserCheck(this);">
+	<table border="1">
+	<col width="150px">
+	<col width="150px">
+	<col width="150px">
+	<col width="150px">
+	<tr>
+		<td>¾ÆÀÌµğ</td>
+		<td><input type="text" name="user_id" style="width:150px"/></td>
+		<td>ÀÌ¸§</td>
+		<td><input type="text" name="user_name" style="width:150px"/></td>
+	</tr>
+	<tr>
+		<td>ºñ¹Ğ¹øÈ£</td>
+		<td><input type="password" name="password" style="width:150px"/></td>
+		<td>ºñ¹Ğ¹øÈ£ È®ÀÎ</td>
+		<td><input type="password" name="password2" style="width:150px"/></td>
+	</tr>
+	<tr>
+		<td>ÀÌ¸ŞÀÏ</td>
+		<td colspan="3"><input type="text" name="email" style="width:450px"/></td>
+	</tr>
+	<tr>
+		<td>ÁÖ¼Ò</td>
+		<td colspan="3"><input type="text" name="addr1" style="width:450px"/></td>
+	</tr>
+	<tr>
+		<td>»ó¼¼</td>
+		<td colspan="3"><input type="text" name="addr2" style="width:450px"/></td>
+	</tr>
+	</table>
+	<input type="submit" value="È¸¿ø°¡ÀÔ"/>
+	</form>
+	</body>
 </html>

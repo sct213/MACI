@@ -32,9 +32,13 @@ public class UserInfoService implements IUserInfoService{
 		
 		if(CmmUtil.nvl(rDTO.getExists_yn()).equals("Y")) {
 			res = 2;
-		} else {
-			int success = userInfoMapper.InsertUserInfo(pDTO);
 			
+		} else {
+			
+			int success = userInfoMapper.insertUserInfo(pDTO);
+			// 회원가입
+			
+			// DB에 데이터가 등록되었다면, 
 			if(success > 0) {
 				res = 1;
 			} else {

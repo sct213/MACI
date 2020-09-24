@@ -23,8 +23,7 @@
 	    <property name="testConnectionOnCheckin" value="true" />
 	    <property name="testConnectionOnCheckout" value="false" />
 	</bean> -->
-	<bean id="dataSource"
-      class="org.apache.commons.dbcp.BasicDataSource">
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
       <property name="driverClassName"
          value="com.mysql.jdbc.Driver"></property>
       <!-- 이 부분은 각자의 환경에 맞게 알아서.. -->
