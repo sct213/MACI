@@ -27,7 +27,7 @@
       <property name="driverClassName"
          value="com.mysql.jdbc.Driver"></property>
       <!-- 이 부분은 각자의 환경에 맞게 알아서.. -->
-      <property name="url" value="jdbc:mysql://127.0.0.1:3306/project?useSSL=false&amp;allowMultiQueries=true&amp;serverTimezone=Asia/Seoul" />
+      <property name="url" value="jdbc:mysql://127.0.0.1:3306/sys?useSSL=false&amp;allowMultiQueries=true&amp;serverTimezone=Asia/Seoul" />
       <property name="username" value="root"/>
       <property name="password" value="10241024"/>
    </bean>

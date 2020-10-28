@@ -1,0 +1,16 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>kopo</groupId>
+  <artifactId>hadoop</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+  
+  	<!-- 하둡의 핵심 기술연동을 위한 라이브러리 -->
+  	<dependency>
+  		<groupId>org.apache.hadoop</groupId>
+  		<artifactId>hadoop-client</artifactId>
+  		<version>2.10.0</version>
+  	</dependency>
+  </dependencies>
+</project>

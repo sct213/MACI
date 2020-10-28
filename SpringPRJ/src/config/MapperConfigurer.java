@@ -11,5 +11,5 @@ public class MapperConfigurer extends MapperScannerConfigurer {
 		super.setAnnotationClass(Mapper.class);
 		super.setSqlSessionFactoryBeanName("sqlSession");
 	}
-	
+
 }

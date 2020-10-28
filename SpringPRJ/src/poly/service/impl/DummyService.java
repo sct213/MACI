@@ -8,9 +8,9 @@ import poly.persistance.mapper.IDummyMapper;
 import poly.service.IDummyService;
 
 @Service("DummyService")
-public class DummyService implements IDummyService{
-	
-	@Resource(name="DummyMapper")
+public class DummyService implements IDummyService {
+
+	@Resource(name = "DummyMapper")
 	private IDummyMapper dummyMapper;
 
 }

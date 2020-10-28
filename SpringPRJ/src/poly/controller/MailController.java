@@ -14,72 +14,72 @@ import poly.dto.MailDTO;
 import poly.service.IMailService;
 import poly.util.CmmUtil;
 
-
 @Controller
 public class MailController {
-	
+
 	private Logger log = Logger.getLogger(this.getClass());
-	
-	@Resource(name="MailService")
+
+	@Resource(name = "MailService")
 	private IMailService mailService;
-	
-	@RequestMapping(value="mail/sendMail", method = RequestMethod.GET)
+
+	@RequestMapping(value = "mail/sendMail", method = RequestMethod.GET)
 	public String sendMail(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws Exception {
-		
+
 		log.info(this.getClass().getName() + "mail.sendMail Start!");
-		
+
 		String toMail = CmmUtil.nvl(request.getParameter("toMail"));
 		String title = CmmUtil.nvl(request.getParameter("title"));
 		String contents = CmmUtil.nvl(request.getParameter("contents"));
-		
+
 		MailDTO pDTO = new MailDTO();
-		
+
 		pDTO.setToMail(toMail);
 		pDTO.setTitle(title);
 		pDTO.setContents(contents);
-		
+
 		int res = mailService.doSendMail(pDTO);
-		
-		if(res == 1) {
+
+		if (res == 1) {
 			log.info(this.getClass().getName() + "mail.sendMail success!!!");
 		} else {
 			log.info(this.getClass().getName() + "mail.sendMail end!!");
 		}
-		
+
 		model.addAttribute("res", String.valueOf(res));
-		
+
 		log.info(this.getClass().getName() + "mail.sendMail End!");
-		
+
 		return "/mail/sendMailResult";
 	}
-	
-	@RequestMapping(value="mail/sendMailForm", method = RequestMethod.GET)
-	public String sendMailForm(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws Exception {
-		
-log.info(this.getClass().getName() + "mail.Form Start!");
-		
+
+	@RequestMapping(value = "mail/sendMailForm", method = RequestMethod.GET)
+	public String sendMailForm(HttpServletRequest request, HttpServletResponse response, ModelMap model)
+			throws Exception {
+
+		log.info(this.getClass().getName() + "mail.Form Start!");
+
 		String toMail = CmmUtil.nvl(request.getParameter("toMail"));
 		String title = CmmUtil.nvl(request.getParameter("title"));
 		String contents = CmmUtil.nvl(request.getParameter("contents"));
-		
+
 		MailDTO pDTO = new MailDTO();
-		
+
 		pDTO.setToMail(toMail);
 		pDTO.setTitle(title);
 		pDTO.setContents(contents);
-		
+
 		int res = mailService.doSendMail(pDTO);
-		
-		if(res == 1) {
+
+		if (res == 1) {
 			log.info(this.getClass().getName() + "mail.sendMail success!!!");
 		} else {
 			log.info(this.getClass().getName() + "mail.sendMail end!!");
 		}
-		
+
 		model.addAttribute("res", String.valueOf(res));
-		
+
 		log.info(this.getClass().getName() + "mail.Form End!");
-		
+
 		return "/mail/sendMailForm";
 	}
 }

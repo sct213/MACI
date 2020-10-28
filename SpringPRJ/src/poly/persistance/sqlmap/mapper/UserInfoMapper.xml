@@ -38,4 +38,10 @@
 			FROM USER_INFO
 			WHERE EMAIL = #{email}
 	</select>
+	<select id="getUserLoginCheck" parameterType="UserInfoDTO" resultType="UserInfoDTO">
+			SELECT USER_ID
+			FROM USER_INFO
+			WHERE USER_ID = #{user_id}
+			AND PASSWORD = #{password}
+		</select>
 </mapper>
